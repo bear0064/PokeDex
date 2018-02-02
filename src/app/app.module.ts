@@ -1,6 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { PokedexCoreModule } from './shared/core.module';
+import { PokedexRoutingModule } from './shared/routes.module';
 
+import { PokedexPagesModule } from './pages/pages.module';
 
 import { AppComponent } from './app.component';
 
@@ -9,8 +12,12 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent
   ],
+  exports: [],
   imports: [
-    BrowserModule
+    BrowserModule,
+    PokedexCoreModule,
+    PokedexRoutingModule,
+    PokedexPagesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
