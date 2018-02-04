@@ -1,10 +1,13 @@
 // export components
-export * from '../pages/layout/nav-layout.component';
-export * from '../pages/pokedex-page/pokedex-page.component';
+export * from '@app/pages/layout/nav-layout.component';
+export * from '@app/pages/pokedex-page/pokedex-page.component';
+
 // components
-import { PokedexNavLayoutComponent } from '../pages/layout/nav-layout.component';
-import { PokedexPokedexPageComponent } from '../pages/pokedex-page/pokedex-page.component';
+import { PokedexNavLayoutComponent } from '@app/pages/layout/nav-layout.component';
+import { PokedexPokedexPageComponent } from '@app/pages/pokedex-page/pokedex-page.component';
+
 import { NgModule } from '@angular/core';
+import { PokedexSharedModule } from '@app/shared/shared.module';
 
 // navigation
 import { RouterModule } from '@angular/router';
@@ -23,8 +26,9 @@ const COMPONENTS = [
 @NgModule({
     imports: [
         RouterModule,
+        PokedexSharedModule
     ],
-    exports: [PAGES],
+    exports: [PAGES, COMPONENTS],
     declarations: [PAGES, COMPONENTS],
 })
 

@@ -1,1 +1,8 @@
-<div> Body </div>
+<div> Pokedex Region Selection </div>
+<!-- <pokedex-list> -->
+<ul>
+    <li *ngFor="let pokedex of pokedexList">
+        <div [attr.data-pokedex-url]="pokedex.url" >{{ pokedex.name }}</div>
+    </li >
+</ul>
+<!-- </pokedex-list> -->

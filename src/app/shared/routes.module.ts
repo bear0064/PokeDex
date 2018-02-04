@@ -3,10 +3,10 @@ import { RouterModule, Routes} from '@angular/router';
 // template partials
 import {
     PokedexNavLayoutComponent,
-} from '../pages/pages.module';
+} from '@app/pages/pages.module';
 
 // template pages
-import { PokedexPokedexPageComponent } from '../pages/pokedex-page/pokedex-page.component';
+import { PokedexPokedexPageComponent } from '@app/pages/pokedex-page/pokedex-page.component';
 
 const routes: Routes = [
     {
