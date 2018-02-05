@@ -1,4 +1,4 @@
 <!-- <div> {{pokedex.name}} Pokedex </div> -->
-<div> {{pokedexPokemonName}} </div>
-<img src='{{pokedexPokemonSprite}}'>
+<div> {{pokemon.name}} </div>
+<img *ngIf="pokedexPokemonSprite" src='{{pokemon.sprites.front_default}}'>
 

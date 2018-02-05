@@ -14,9 +14,11 @@ export class PokedexPokemonPageComponent implements OnInit, OnDestroy {
 
     private url: string;
     private sub: any;
-    private pokedexPokemon: any;
+    private pokemon = <IPokedexPokemon>{};
+
     private pokedexPokemonName: string;
-    private pokedexPokemonSprite: any;
+    private pokedexPokemonSprite: string;
+    private pokedexPokemonId: number;
 
     constructor ( private getPokedexPokemonService: PokedexPokemonService, private route: ActivatedRoute ) { }
 
@@ -28,15 +30,12 @@ export class PokedexPokemonPageComponent implements OnInit, OnDestroy {
     }
 
     private getPokemon(url: string) {
-        this.getPokedexPokemonService.getPokedexCall(url).subscribe((result: IPokedexPokemon) => {
-                this.separatePokeData(result);
+        this.getPokedexPokemonService.getPokedexCall(url).subscribe((res: IPokedexPokemon) => {
+                this.pokemon = res;
+                this.pokedexPokemonId = this.pokemon.id;
+                this.pokedexPokemonName = this.pokemon.name;
+                this.pokedexPokemonSprite = this.pokemon.sprites.front_default;
             });
-    }
-    private separatePokeData(result: any) {
-        console.log(result);
-        this.pokedexPokemon = result;
-        this.pokedexPokemonName = result.name;
-        this.pokedexPokemonSprite = result.sprites.front_default;
     }
 
     ngOnDestroy() {

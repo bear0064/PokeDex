@@ -1,8 +1,6 @@
 <div> Pokedex Region Selection </div>
-<!-- <pokedex-list> -->
 <ul>
-    <li *ngFor="let pokedex of pokedexList">
+    <li *ngFor="let pokedex of pokedexRegionList.results">
         <div [routerLink]="['/pokedexregion', pokedex.url]" routerLinkActive="active">{{ pokedex.name }}</div>
     </li >
 </ul>
-<!-- </pokedex-list> -->

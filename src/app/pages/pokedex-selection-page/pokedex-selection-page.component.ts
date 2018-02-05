@@ -12,7 +12,7 @@ import { Observable } from 'rxjs/Observable';
 
 export class PokedexSelectionPageComponent implements OnInit {
 
-    private pokedexList: Array<any>;
+    private pokedexRegionList = <IPokedex>{};
 
     constructor ( private getPokedexService: PokedexSelectionService, private router: Router ) { }
 
@@ -21,13 +21,8 @@ export class PokedexSelectionPageComponent implements OnInit {
     }
 
     private getPokedex() {
-        this.getPokedexService.getPokedexRegionCall().subscribe((result: IPokedex) => {
-            this.pokedexList = result.results;
-            console.log(this.pokedexList);
+        this.getPokedexService.getPokedexRegionCall().subscribe((resp: IPokedex) => {
+            this.pokedexRegionList = resp;
             });
     }
-
-    private getRegionalPokemon(pokedeUrl) {
-    }
-
 }

@@ -1,3 +1,3 @@
 export interface IPokedexRegion {
-    result: any;
+    results: Array<any>;
 }
