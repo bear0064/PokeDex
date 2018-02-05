@@ -1,7 +1,7 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { PokedexPokedexService } from '@app/services';
+import { PokedexSelectionService, PokedexRegionService, PokedexPokemonService } from '@app/services';
 
 @NgModule({
     imports: [
@@ -10,7 +10,9 @@ import { PokedexPokedexService } from '@app/services';
     ],
     declarations: [],
     providers: [
-        PokedexPokedexService,
+        PokedexSelectionService,
+        PokedexRegionService,
+        PokedexPokemonService,
     ],
 })
 

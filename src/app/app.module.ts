@@ -7,7 +7,6 @@ import { PokedexPagesModule } from './pages/pages.module';
 
 import { AppComponent } from './app.component';
 
-
 @NgModule({
   declarations: [
     AppComponent

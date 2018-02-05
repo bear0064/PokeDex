@@ -6,23 +6,22 @@ import {
 } from '@app/pages/pages.module';
 
 // template pages
-import { PokedexPokedexPageComponent } from '@app/pages/pokedex-page/pokedex-page.component';
+import { PokedexSelectionPageComponent } from '@app/pages/pokedex-selection-page/pokedex-selection-page.component';
+import { PokedexRegionPageComponent } from '@app/pages/pokedex-region-page/pokedex-region-page.component';
+import { PokedexPokemonPageComponent } from '@app/pages/pokedex-pokemon-page/pokedex-pokemon-page.component';
+
 
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'app/pokedex',
+        redirectTo: 'pokedexselection',
         pathMatch: 'full'
     },
-    {
-        path: 'app',
-        component: PokedexNavLayoutComponent,
-        children:
-            [
-                { path: '', redirectTo: 'pokedex', pathMatch: 'full' },
-                { path: 'pokedex', component: PokedexPokedexPageComponent },
-            ]
-    },
+    { path: 'pokedexselection', component: PokedexSelectionPageComponent },
+    { path: 'pokedexregion/:url', component: PokedexRegionPageComponent },
+    { path: 'pokedexpokemon/:url', component: PokedexPokemonPageComponent },
+    // { path: 'pokemon/:id' },
+
     // { path: '**', redirectTo: '/app/404' }
 ];
 

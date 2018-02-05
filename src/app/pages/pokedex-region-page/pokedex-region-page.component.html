@@ -1,0 +1,9 @@
+<!-- <div> {{pokedex.name}} Pokedex </div> -->
+<div> {{pokedexRegionName}} Pokedex </div>
+<!-- <pokedex-list> -->
+<ul>
+    <li *ngFor="let pokemon of pokedexRegionList">
+        <div [routerLink]="['/pokedexpokemon', pokemon.pokemon_species.name]" routerLinkActive="active">{{ pokemon.pokemon_species.name }}</div>
+    </li>
+</ul>
+<!-- </pokedex-list> -->
