@@ -1,3 +1,6 @@
 export interface IPokedex {
-    results: { url: string, name: string }[];
+    results: {
+        url: string,
+        name: string
+    }[];
 }

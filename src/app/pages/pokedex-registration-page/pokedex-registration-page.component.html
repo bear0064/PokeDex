@@ -1,0 +1,27 @@
+<h2>Registration</h2>
+<form name="register">
+    <div>
+        <label for="firstName">First Name</label>
+        <input name="firstName" type="text" required>
+        <div></div>
+    </div>
+    <div>
+        <label for="lastName">Last Name</label>
+        <input name="lastName" type="text" required>
+        <div></div>    
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input name="email" type="email" required>
+        <div></div>    
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input name="password" type="password" required>
+        <div></div>    
+    </div>
+    <div>
+        <button>Register</button>
+        <a [routerLink]="['/login']">Cancel</a>
+    </div>
+</form>

@@ -1,8 +1,8 @@
 <!-- <div> {{pokedex.name}} Pokedex </div> -->
-<div> {{pokedexRegionName}} Pokedex </div>
+<div *ngIf="pokedexRegionPokemonList"> {{pokedexRegionPokemonList.name}} Pokedex </div>
 <!-- <pokedex-list> -->
 <ul>
-    <li *ngFor="let pokemon of pokedexRegionList">
+    <li *ngFor="let pokemon of pokedexRegionPokemonList.pokemon_entries">
         <div [routerLink]="['/pokedexpokemon', pokemon.pokemon_species.name]" routerLinkActive="active">{{ pokemon.pokemon_species.name }}</div>
     </li>
 </ul>

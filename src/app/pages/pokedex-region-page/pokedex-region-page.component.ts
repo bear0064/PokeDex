@@ -14,8 +14,8 @@ export class PokedexRegionPageComponent implements OnInit, OnDestroy {
 
     private url: string;
     private sub: any;
-    private pokedexRegionList: Array<any> = [];
-    private pokedexRegionName: string;
+
+    private pokedexRegionPokemonList = <IPokedexRegion>{};
 
     constructor ( private getPokedexRegionService: PokedexRegionService, private route: ActivatedRoute ) { }
 
@@ -27,15 +27,9 @@ export class PokedexRegionPageComponent implements OnInit, OnDestroy {
     }
 
     private getPokedex(url: string) {
-        this.getPokedexRegionService.getPokedexCall(url).subscribe((result: IPokedexRegion) => {
-                this.separatePokeData(result);
-                console.log(result);
-
+        this.getPokedexRegionService.getPokedexCall(url).subscribe((resp: IPokedexRegion) => {
+            this.pokedexRegionPokemonList = resp;
             });
-    }
-    private separatePokeData(result: any) {
-        this.pokedexRegionList = result.pokemon_entries;
-        this.pokedexRegionName = result.name;
     }
     ngOnDestroy() {
         this.sub.unsubscribe();

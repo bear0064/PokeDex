@@ -3,6 +3,7 @@ export * from '@app/pages/layout/nav-layout.component';
 export * from '@app/pages/pokedex-selection-page/pokedex-selection-page.component';
 export * from '@app/pages/pokedex-region-page/pokedex-region-page.component';
 export * from '@app/pages/pokedex-pokemon-page/pokedex-pokemon-page.component';
+export * from '@app/pages/pokedex-registration-page/pokedex-registration-page.component';
 
 
 // components
@@ -10,6 +11,7 @@ import { PokedexNavLayoutComponent } from '@app/pages/layout/nav-layout.componen
 import { PokedexSelectionPageComponent } from '@app/pages/pokedex-selection-page/pokedex-selection-page.component';
 import { PokedexRegionPageComponent } from '@app/pages/pokedex-region-page/pokedex-region-page.component';
 import { PokedexPokemonPageComponent } from '@app/pages/pokedex-pokemon-page/pokedex-pokemon-page.component';
+import { PokedexRegistrationPageComponent } from '@app/pages/pokedex-registration-page/pokedex-registration-page.component';
 
 
 import { NgModule } from '@angular/core';
@@ -25,6 +27,7 @@ const PAGES = [
     PokedexSelectionPageComponent,
     PokedexRegionPageComponent,
     PokedexPokemonPageComponent,
+    PokedexRegistrationPageComponent,
 ];
 
 const COMPONENTS = [

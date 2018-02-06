@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { PokedexSelectionService } from '@app/services/pokedex-selection.service';
 import { IPokedex } from '@app/interfaces';
 import { Observable } from 'rxjs/Observable';
@@ -12,9 +12,9 @@ import { Observable } from 'rxjs/Observable';
 
 export class PokedexSelectionPageComponent implements OnInit {
 
-    private pokedexRegionList = <IPokedex>{};
+    private pokedexRegionsList = <IPokedex>{};
 
-    constructor ( private getPokedexService: PokedexSelectionService, private router: Router ) { }
+    constructor ( private getPokedexService: PokedexSelectionService, private route: ActivatedRoute ) { }
 
     public ngOnInit() {
         this.getPokedex();
@@ -22,7 +22,7 @@ export class PokedexSelectionPageComponent implements OnInit {
 
     private getPokedex() {
         this.getPokedexService.getPokedexRegionCall().subscribe((resp: IPokedex) => {
-            this.pokedexRegionList = resp;
+            this.pokedexRegionsList = resp;
             });
     }
 }

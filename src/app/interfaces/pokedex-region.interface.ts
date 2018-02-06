@@ -1,3 +1,10 @@
 export interface IPokedexRegion {
-    results: Array<any>;
+    name: string;
+    pokemon_entries: {
+        entry_number: string,
+        pokemon_species: {
+            name: string,
+            url: string
+        },
+    }[];
 }

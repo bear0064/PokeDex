@@ -30,11 +30,12 @@ export class PokedexPokemonPageComponent implements OnInit, OnDestroy {
     }
 
     private getPokemon(url: string) {
-        this.getPokedexPokemonService.getPokedexCall(url).subscribe((res: IPokedexPokemon) => {
-                this.pokemon = res;
-                this.pokedexPokemonId = this.pokemon.id;
-                this.pokedexPokemonName = this.pokemon.name;
-                this.pokedexPokemonSprite = this.pokemon.sprites.front_default;
+        this.getPokedexPokemonService.getPokedexCall(url).subscribe((resp: IPokedexPokemon) => {
+                this.pokemon = resp;
+                console.log(this.pokemon);
+                // this.pokedexPokemonId = this.pokemon.id;
+                // this.pokedexPokemonName = this.pokemon.name;
+                // this.pokedexPokemonSprite = this.pokemon.sprites.front_default;
             });
     }
 
