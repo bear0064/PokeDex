@@ -35,10 +35,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Application Login
 
-The application has no actual route guards or endpoints for login. 
+**The application has no actual route guards or endpoints for login.**
+
 The login for requires an email which will be validated - example@something.com and a password - (any) which has no validation or requirements.
 
-The registration page is for the sake of validation testing, it contains no endpoint and stores no data. 
+**The registration page is for the sake of validation testing, it contains no endpoint and stores no data.**
+
 The registraton form validates all fields: 
 
 name:
