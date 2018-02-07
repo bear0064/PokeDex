@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="card login-card col-6 mx-auto ">
+    <div class="card login-card col-md-8 mx-auto ">
         <div class="card-body">
-            <h4 class="card-title">Pokedex Database Registration</h4>
+            <h4 class="card-title">Global Pokedex Service Registration</h4>
             <form [formGroup]="registrationForm">
                 <div class="md-form" [ngClass]="{'error': registrationForm.controls['username'].errors && !registrationForm.controls['username'].pristine}">
                     <input type="text" id="orangeForm-name" formControlName="username" class="form-control" mdbActive>

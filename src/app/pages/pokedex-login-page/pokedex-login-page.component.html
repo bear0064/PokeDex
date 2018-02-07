@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="card login-card col-6 mx-auto ">
+    <div class="card login-card col-md-6 mx-auto ">
         <div class="card-body">
-            <h4 class="card-title">Pokedex Database Login</h4>
+            <h4 class="card-title">Global Pokedex Service Login</h4>
             <form [formGroup]="loginForm">
                 <div class="md-form" [ngClass]="{'error': loginForm.controls['email'].errors && !loginForm.controls['email'].pristine}">
                     <input type="email" id="defaultForm-email" formControlName="email" class="form-control" mdbActive required>
