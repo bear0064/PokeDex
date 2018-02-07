@@ -40,6 +40,7 @@ The login for requires an email which will be validated - example@something.com 
 
 The registration page is for the sake of validation testing, it contains no endpoint and stores no data. 
 The registraton form validates all fields: 
+
 name:
 * required
 
