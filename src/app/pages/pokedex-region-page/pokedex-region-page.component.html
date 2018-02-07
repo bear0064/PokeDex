@@ -1,3 +1,5 @@
+<h2 *ngIf="pokedexRegionPokemonList.name">{{pokedexRegionPokemonList?.name | capitalize}} Pokedex</h2>
+
 <div class="list-group">
     <a [routerLink]="['/pokedexpokemon', pokemon.pokemon_species.name]" routerLinkActive="active" *ngFor="let pokemon of pokedexRegionPokemonList.pokemon_entries" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
