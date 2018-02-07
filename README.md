@@ -18,7 +18,7 @@ npm WARN angular-bootstrap-md@5.1.2 requires a peer of chart.js@2.5.x but none i
 npm WARN angular-bootstrap-md@5.1.2 requires a peer of hammerjs@2.0.x but none is installed. You must install peer dependencies yourself.
 ```
 
-@angular-bootstrap-md will warn you of unmet dependancies however, the application will still work and buid - Upon reading their documentation:
+@angular-bootstrap-md will warn you of unmet dependancies however, the application will still work and build - Upon reading their documentation:
 
 >Warnings will disappear as soon as 3rd party libs will release their updates for Angular 5. From our side, we have tested our package against Angular 5 and we can confirm that those warnings don’t affect the functionalities so you can ignore them as Angular 5 is backwards compatible with Angular 4. As a result, thus 3rd party plugins are working correctly with Angular 5, however warning that they have been fully tested with Angular 4.0.3.
 
