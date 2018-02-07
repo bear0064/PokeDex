@@ -1,3 +1,24 @@
-<div> {{pokemon.name}} </div>
-<img *ngIf="pokemon.sprites" src='{{pokemon.sprites.front_default}}'>
+<div class="row">
+    <div class="col-md-8 mx-auto">
+            <div class="card testimonial-card" *ngIf="pokemon.sprites">
+                <div class="card-up red lighten-1">
+            </div>
+            <div class="avatar"><img  src='{{pokemon.sprites.front_default}}' class="rounded-circle">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title" >{{pokemon.name | capitalize}}</h4>
+                <hr>
+                <p>Pokemon Weight: </p>
+                <p>{{pokemon.weight | number : '.1'}} kg</p>
+                <p>Pokemon Height: </p>
+                <p>{{pokemon.height | number : '.1'}} m</p>
+                <p>Pokemon Type: </p>
+                <div *ngFor="let types of pokemon.types">
+                    <p>{{types.type.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
 
+                

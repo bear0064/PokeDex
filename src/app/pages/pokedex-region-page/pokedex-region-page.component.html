@@ -1,9 +1,7 @@
-<!-- <div> {{pokedex.name}} Pokedex </div> -->
-<div *ngIf="pokedexRegionPokemonList"> {{pokedexRegionPokemonList.name}} Pokedex </div>
-<!-- <pokedex-list> -->
-<ul>
-    <li *ngFor="let pokemon of pokedexRegionPokemonList.pokemon_entries">
-        <div [routerLink]="['/pokedexpokemon', pokemon.pokemon_species.name]" routerLinkActive="active">{{ pokemon.pokemon_species.name }}</div>
-    </li>
-</ul>
-<!-- </pokedex-list> -->
+<div class="list-group">
+    <a [routerLink]="['/pokedexpokemon', pokemon.pokemon_species.name]" routerLinkActive="active" *ngFor="let pokemon of pokedexRegionPokemonList.pokemon_entries" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ pokemon.pokemon_species.name | capitalize}}</h5>
+        </div>
+    </a>
+</div>  

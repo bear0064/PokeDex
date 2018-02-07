@@ -14,7 +14,7 @@ export class PokedexSelectionPageComponent implements OnInit {
 
     private pokedexRegionsList = <IPokedex>{};
 
-    constructor ( private getPokedexService: PokedexSelectionService, private route: ActivatedRoute ) { }
+    constructor ( private getPokedexService: PokedexSelectionService, private router: ActivatedRoute ) { }
 
     public ngOnInit() {
         this.getPokedex();

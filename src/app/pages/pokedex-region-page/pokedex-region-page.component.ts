@@ -17,10 +17,10 @@ export class PokedexRegionPageComponent implements OnInit, OnDestroy {
 
     private pokedexRegionPokemonList = <IPokedexRegion>{};
 
-    constructor ( private getPokedexRegionService: PokedexRegionService, private route: ActivatedRoute ) { }
+    constructor ( private getPokedexRegionService: PokedexRegionService, private router: ActivatedRoute ) { }
 
     public ngOnInit() {
-        this.sub = this.route.params.subscribe((params) => {
+        this.sub = this.router.params.subscribe((params) => {
             this.url = params.url;
             this.getPokedex(this.url);
          });

@@ -4,6 +4,7 @@ export * from '@app/pages/pokedex-selection-page/pokedex-selection-page.componen
 export * from '@app/pages/pokedex-region-page/pokedex-region-page.component';
 export * from '@app/pages/pokedex-pokemon-page/pokedex-pokemon-page.component';
 export * from '@app/pages/pokedex-registration-page/pokedex-registration-page.component';
+export * from '@app/pages/pokedex-login-page/pokedex-login-page.component';
 
 
 // components
@@ -12,6 +13,8 @@ import { PokedexSelectionPageComponent } from '@app/pages/pokedex-selection-page
 import { PokedexRegionPageComponent } from '@app/pages/pokedex-region-page/pokedex-region-page.component';
 import { PokedexPokemonPageComponent } from '@app/pages/pokedex-pokemon-page/pokedex-pokemon-page.component';
 import { PokedexRegistrationPageComponent } from '@app/pages/pokedex-registration-page/pokedex-registration-page.component';
+import { PokedexLoginPageComponent } from '@app/pages/pokedex-login-page/pokedex-login-page.component';
+import { Pokedex404PageComponent } from '@app/pages/404-page/404-page.component';
 
 
 import { NgModule } from '@angular/core';
@@ -28,8 +31,11 @@ const PAGES = [
     PokedexRegionPageComponent,
     PokedexPokemonPageComponent,
     PokedexRegistrationPageComponent,
+    PokedexLoginPageComponent,
+    Pokedex404PageComponent,
 ];
 
+// Custom Components/Templates/Etc
 const COMPONENTS = [
 
 ];

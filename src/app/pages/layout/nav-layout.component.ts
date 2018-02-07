@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatMenuTrigger } from '@angular/material/menu';
-import { MatMenuModule } from '@angular/material';
+import {Location} from '@angular/common';
+
 
 @Component({
     templateUrl: './nav-layout.component.html',
@@ -10,13 +10,11 @@ import { MatMenuModule } from '@angular/material';
 
 export class PokedexNavLayoutComponent implements OnInit {
 
-    @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
-
-    constructor ( private router: Router ) { }
+    constructor ( private router: Router, private location: Location ) { }
     public ngOnInit() {
     }
 
-    public someMethod() {
-    this.trigger.openMenu();
-  }
+    private goBack(): void {
+        this.location.back();
+      }
 }

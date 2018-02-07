@@ -4,10 +4,11 @@ import { PokedexPokemonService } from '@app/services/pokedex-pokemon.service';
 import { IPokedexPokemon } from '@app/interfaces';
 import { Observable } from 'rxjs/Observable';
 
+
 @Component({
     templateUrl: './pokedex-pokemon-page.component.html',
     styleUrls: ['./pokedex-pokemon-page.component.scss'],
-    providers: [PokedexPokemonService]
+    providers: [PokedexPokemonService],
 })
 
 export class PokedexPokemonPageComponent implements OnInit, OnDestroy {
@@ -20,10 +21,10 @@ export class PokedexPokemonPageComponent implements OnInit, OnDestroy {
     private pokedexPokemonSprite: string;
     private pokedexPokemonId: number;
 
-    constructor ( private getPokedexPokemonService: PokedexPokemonService, private route: ActivatedRoute ) { }
+    constructor ( private getPokedexPokemonService: PokedexPokemonService, private router: ActivatedRoute ) { }
 
     public ngOnInit() {
-        this.sub = this.route.params.subscribe((params) => {
+        this.sub = this.router.params.subscribe((params) => {
             this.url = params.url;
             this.getPokemon(this.url);
          });

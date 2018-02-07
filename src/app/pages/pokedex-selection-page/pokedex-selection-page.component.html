@@ -1,6 +1,31 @@
-<div> Pokedex Region Selection </div>
-<ul >
-    <li *ngFor="let pokedex of pokedexRegionsList.results">
-        <div [routerLink]="['/pokedexregion', pokedex.url]" routerLinkActive="active">{{ pokedex.name }}</div>
-    </li >
-</ul>
+<div class="row card-group">
+    <div class="col-lg-4"  *ngFor="let pokedex of pokedexRegionsList.results">
+        <div class="card">
+            <!--Card image-->
+            <div [ngSwitch]="pokedex.name">
+                <img class="img-fluid pokedex" *ngSwitchCase="'national'" src="../../../assets/images/regions/Kanto.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'kanto'" src="../../../assets/images/regions/Kanto.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'original-johto'" src="../../../assets/images/regions/Johto.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'hoenn'" src="../../../assets/images/regions/Hoenn.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'original-sinnoh'" src="../../../assets/images/regions/Sinnoh.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'extended-sinnoh'" src="../../../assets/images/regions/Sinnoh.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'updated-johto'" src="../../../assets/images/regions/Johto.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'original-unova'" src="../../../assets/images/regions/Unova.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'updated-unova'" src="../../../assets/images/regions/Unova.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'conquest-gallery'" src="../../../assets/images/pokedex.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'kalos-central'" src="../../../assets/images/regions/Kalos.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'kalos-coastal'" src="../../../assets/images/regions/Kalos.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'kalos-mountain'" src="../../../assets/images/regions/Kalos.png" alt="Card image cap">
+                <img class="img-fluid pokedex" *ngSwitchCase="'updated-hoenn'" src="../../../assets/images/regions/Hoenn.png" alt="Card image cap">
+            </div>
+            <!--Card content-->
+            <div class="card-body">
+                <!--Title-->
+                <h4 class="card-title">{{ pokedex.name | capitalize }}</h4>
+                <!--Text-->
+                <a href="#" class="btn btn-primary waves-light" mdbRippleRadius [routerLink]="['/pokedexregion', pokedex.url]" routerLinkActive="active">Open POKEDEX</a>
+            </div>
+        </div>  
+    </div>
+</div>
+<!--/.Card-->
