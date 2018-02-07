@@ -3,6 +3,7 @@ import { ActivatedRoute  } from '@angular/router';
 import { PokedexPokemonService } from '@app/services/pokedex-pokemon.service';
 import { IPokedexPokemon } from '@app/interfaces';
 import { Observable } from 'rxjs/Observable';
+import {Location} from '@angular/common';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class PokedexPokemonPageComponent implements OnInit, OnDestroy {
     private pokedexPokemonSprite: string;
     private pokedexPokemonId: number;
 
-    constructor ( private getPokedexPokemonService: PokedexPokemonService, private router: ActivatedRoute ) { }
+    constructor ( private location: Location, private getPokedexPokemonService: PokedexPokemonService, private router: ActivatedRoute ) { }
 
     public ngOnInit() {
         this.sub = this.router.params.subscribe((params) => {
@@ -43,4 +44,7 @@ export class PokedexPokemonPageComponent implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.sub.unsubscribe();
       }
+    private goBack(): void {
+        this.location.back();
+    }
 }

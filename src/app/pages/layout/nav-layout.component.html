@@ -1,18 +1,10 @@
 <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-red scrolling-navbar" [containerInside]="false">
     <logo>
-        <a class="logo navbar-brand" tabindex="0"><strong>Global Pokedex Service</strong></a>
+        <a class="logo navbar-brand" tabindex="0"[routerLink]="['/pokedexselection']"><strong>Global Pokedex Service</strong></a>
     </logo>
     
     <links>
-        <ul class="navbar-nav mr-auto" *ngIf="router.url != '/pokedexselection'">
-            <li class="nav-item active waves-light" mdbRippleRadius>
-                <a class="nav-link" [routerLink]="['/pokedexselection']">Select Pokedex <span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
         <ul class="navbar-nav nav-flex-icons ml-auto">
-            <li class="nav-item waves-light" mdbRippleRadius  *ngIf="router.url != '/pokedexselection'">
-                <a class="nav-link" (click)='goBack()' >Back</a>
-            </li>
             <li class="nav-item waves-light" mdbRippleRadius>
                 <a class="nav-link" [routerLink]="['/pokedexlogin']">Logout</a>                
             </li>            
